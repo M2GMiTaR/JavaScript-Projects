@@ -42,3 +42,35 @@ function negation_Operator() {
     var x = 10;
     document.getElementById("Math7").innerHTML = -x;
 }
+
+// Increment and Decrement Operators
+function increment_Function() {
+    var x = 10
+    x++;
+    document.getElementById("Math8").innerHTML = "Incremented value: " + x;
+}
+
+function decrement_Function() {
+    var y = 10;
+    y--;
+    document.getElementById("Math9").innerHTML = "Decremented value: " + y;
+}
+
+// Random math number
+function random_Function() {
+    var randomNumber = Math.random() * 100;
+    document.getElementById("Random").innerHTML = "Random number between 0 and 100: " + randomNumber;
+}
+
+
+//Square root
+function sqrt_Function() {
+    var squareRoot = Math.sqrt(64);
+    document.getElementById("Sqrt").innerHTML = "Square root of 64 is: " + squareRoot;
+}
+
+// Rounding a number
+function round_Function() {
+    var roundedNumber = Math.round(7.6);
+    document.getElementById("Round").innerHTML = "7.6 rounded is " + roundedNumber;
+}
