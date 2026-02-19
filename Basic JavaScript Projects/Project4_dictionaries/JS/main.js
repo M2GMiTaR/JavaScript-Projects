@@ -12,3 +12,17 @@ function showDefinition() {
     var definition = myDictionary["JavaScript"];
     document.getElementById("Dictionary").innerHTML = definition;
 }
+
+// Operators as Words
+
+function my_Dictionary() {
+    var Animal = {
+        Species:"Dog",
+        Color:"Black",
+        Breed:"Labrador",
+        Age:"5",
+        Sound:"Bark!"
+    };
+    delete Animal.Sound; // Using Word operator to delete value within dictionary
+    document.getElementById("Dictionary1").innerHTML = Animal.Sound;
+}
