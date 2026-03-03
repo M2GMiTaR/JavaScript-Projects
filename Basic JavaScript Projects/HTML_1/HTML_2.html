@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML 2 file</title>
+        <link rel="stylesheet" href="CSS/CSS_1.css">
+        <script src="JavaScript/JavaScript_2.js" defer></script>
+    </head>
+
+    <body>
+        <h1>Contact Us</h1>
+        <!-- Contact form-->
+
+        <!-- Contact form onsubmit runs the validateForm() function
+        Returning false stops the form from submitting-->
+        <form name="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
