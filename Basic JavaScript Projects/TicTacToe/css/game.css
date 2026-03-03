@@ -19,7 +19,7 @@ td {
     /* This property changes the cursor to the
      index finger hand when we hover over the td element */
     cursor: pointer;
-    border: 4px solid rgba(22, 169, 30, 84);  /* sets table border style */
+    border: 4px solid rgba(22, 169, 30, 8);  /* sets table border style */
     padding: 0px;                   /* this removes the default padding */
     width: 200px;
     height: 200px;

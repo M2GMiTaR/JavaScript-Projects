@@ -1,0 +1,90 @@
+html {
+    font-size: 70%;
+    box-sizing: border-box;  /* Includes padding & border inside width/height */
+}
+
+/* Apply consistent box-sizing and remove default margin/padding */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* Main calculator container */
+.calculator {
+    border: 1.2px solid darkslategray;
+    border-radius: 7px;
+    position: absolute;         /* Center calculator perfectly in the middle of the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+/* Display screen (input/output area) */
+.calculator-screen {
+    width: 100%;
+    font-size: 5rem;        /* Large font for visibility */
+    height: 80px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: right;      /* Numbers align like real calculator */
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 7px 7px 0px 0px;         /* Rounded corners only on top */
+}
+/* General button styling */
+button {
+    height: 70px;
+    border-radius: 3px;
+    border: 1px solid darkslategray;
+    background-color: transparent;
+    font-size: 3.2rem;
+    color: black;
+    /* Creates subtle 3D button shading effect */
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0,0,0,0.6));
+    text-shadow: 0 1px rgba(255, 255, 255, .4);         /* Light highlight on text */
+    /*each value below is seperated by a comma ',' after the rgba values */
+    /* Inner highlights + slight outer shadow for depth */
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.5),
+    0 1px 00 rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+    background-color: #e1e1e1;
+}
+/* Operator buttons (+, -, ×, ÷) */
+.operator {
+    color: black;
+    /* Slightly different gradient for visual distinction */
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0,0,0,0.5));
+    background-color: lightgray;
+}
+/* AC (All Clear) button */
+.all-clear {
+    background-color: red;
+    border-color: darkslategray;
+    color: #ffffff;
+}
+/* Equal (=) button */
+.equal-sign {
+    background-color: blue;
+    border-color: darkslategray;
+    color: #fff;
+    height: 100%;
+    /* Grid positioning: Starts row 2 column 4
+       Ends row 6 column 5, Makes the button span vertically */
+    grid-area: 2/4/6/5;
+}
+
+.equal-sign:hover {
+    background-color: darkblue;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);      /* 4 equal-width columns */
+    grid-gap: 20px;                             /* Space between buttons */
+    padding: 20px;
+}
