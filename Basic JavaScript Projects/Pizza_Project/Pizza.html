@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clan Skryre Warpstone Pizzeria</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <ul>
+            <li>Home-Hovel</li>
+            <li>Menu of Doom</li>
+            <li>Warpstone Specials</li>
+            <li>Contact the Under-Empire</li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <header class="banner"></header>
+
+    <!-- MENU -->
+    <div id="menuBG">
+
+        <input id="btnOrder" type="button" onclick="getReceipt()" 
+        value="Summon Pizza">
+
+        <form id="frmMenu">
+
+            <div class="menu left">
+                <h3>Choose Your Warp-Size:</h3>
+                <input class="size" type="radio" name="Size" value="Clanrat Snack"> Clanrat Snack<br>
+                <input class="size" type="radio" name="Size" value="Stormvermin Slice"> Stormvermin Slice<br>
+                <input class="size" type="radio" name="Size" value="Warpfire Feast" checked> Warpfire Feast<br>
+                <input class="size" type="radio" name="Size" value="Doomwheel Deluxe"> Doomwheel Deluxe<br>
+                <input class="size" type="radio" name="Size" value="Vermintide Platter"> Vermintide Platter<br>
+            </div>
+
+            <div class="menu center">
+                <h3>Warp-Vegetables:</h3>
+                <input class="toppings" type="checkbox" value="Glowshroom Spores"> Glowshroom Spores<br>
+                <input class="toppings" type="checkbox" value="Rotroot Onions"> Rotroot Onions<br>
+                <input class="toppings" type="checkbox" value="Blight Tomatoes"> Blight Tomatoes<br>
+                <input class="toppings" type="checkbox" value="Warp Olives"> Warp Olives<br>
+                <input class="toppings" type="checkbox" value="Plague Peppers"> Plague Peppers<br>
+            </div>
+
+            <div class="menu right">
+                <h3>Meats of the Under-Empire:</h3>
+                <input class="toppings" type="checkbox" value="Warpstone Pepperoni"> Warpstone Pepperoni<br>
+                <input class="toppings" type="checkbox" value="Skaven Sausage"> Skaven Sausage<br>
+                <input class="toppings" type="checkbox" value="Mutant Bacon"> Mutant Bacon<br>
+                <input class="toppings" type="checkbox" value="Clanrat Crumbles"> Clanrat Crumbles<br>
+                <input class="toppings" type="checkbox" value="Deep Tunnel Anchovy"> Deep Tunnel Anchovy<br>
+                <input class="toppings" type="checkbox" value="Salami of Doom"> Salami of Doom<br>
+            </div>
+
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="Pizza_JavaScript/Pizza.js"></script>
+
+</body>
+</html>

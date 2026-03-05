@@ -1,0 +1,98 @@
+body {
+    background-color: #1a1f1a;;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #c7ff5e;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111;
+    padding: 15px;
+    border-bottom: 3px solid #5aff00;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    color: #c7ff5e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar li:hover {
+    color: #5aff00;
+}
+
+/* BANNER WITH IMAGE */
+.banner {
+	/* Softer gradient so image is more visible */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("images/skaven-banner.png");
+    height: 520px;		/*Adjusted height to display image the way i like it */
+    padding: 140px 20px; /* added padding to modify size of banner */
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #5aff00;
+    filter: brightness(1.65) contrast(1.1); 	/*Adjusted banner brightness */
+}
+
+/* MENU BOX */
+#menuBG {
+    width: 850px;
+    margin: 40px auto;
+    background-color: #1b1b1b;
+    padding: 30px;
+    border: 2px solid #5aff00;
+    box-shadow: 0 0 25px #00ff00;
+}
+
+.menu {
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+}
+
+h3 {
+    color: #5aff00;
+    border-bottom: 1px solid #5aff00;
+    padding-bottom: 5px;
+}
+
+#cart {
+    clear: both;
+    padding-top: 30px;
+}
+
+#showText, #totalPrice {
+    background-color: #111;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #5aff00;
+}
+
+/* BUTTON */
+#btnOrder {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #5aff00;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnOrder:hover {
+    background-color: #8dff3f;
+    box-shadow: 0 0 15px #5aff00;
+}
