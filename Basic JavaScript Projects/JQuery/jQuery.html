@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Challenge</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+    //wait until the document is loaded before runnign any jQuery
+    $(document).ready(function() {
+        //selects the html element to append content
+        $("body").append(
+            //content to be added to the HTML element
+            "<div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3 (Click Me)</p>\
+                </div>\
+            </div>"
+        );
+
+        // Change Paragraph 2 color
+        $("#2").css({"color":"red"});
+
+        // jQuery EVENT
+        $("#3").click(function(){
+
+            // jQuery EFFECT to fade out the targeted h1 element
+            $("h1").fadeOut();
+        });
+
+    });
+</script>
+
+</head>
+
+<body>
+</body>
+</html>
