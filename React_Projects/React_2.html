@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Page title -->
+    <title>React 2</title>
+
+    <!-- React library -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM library for rendering -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+
+    <!-- Container where the React component will appear -->
+    <div id="like_button_container"></div>
+
+    <script>
+
+        // Shortcut variable for React.createElement
+        // This makes writing components easier
+        const X = React.createElement;
+
+        // Create a React component class
+        class likeButton extends React.Component {
+
+            // Constructor runs when component is created
+            constructor(props) {
+
+                // Call parent constructor
+                super(props);
+
+                // Component state
+                // liked = false initially
+                this.state = { liked: false };
+            }
+
+            // render() decides what appears on the screen
+            render() {
+
+                // If the button has been clicked
+                if (this.state.liked) {
+
+                    // Show a message instead of the button
+                    return 'You clicked the like button!';
+                }
+
+                // Otherwise show the Like button
+                return X(
+                    'button',                 // HTML button element
+
+                    // Button properties
+                    { onClick: () => this.setState({ liked: true }) },
+
+                    // Button text
+                    'Like'
+                );
+            }
+        }
+
+        // Find the container element in HTML
+        const domContainer =
+            document.querySelector('#like_button_container');
+
+        // Render the React component inside the container
+        ReactDOM.render(
+            X(likeButton),
+            domContainer
+        );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title of the webpage -->
+    <title>React 3</title>
+
+    <!-- React core library -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+    <!-- React DOM library used to render React components into HTML -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Babel compiler allows JSX to run directly in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Container where the React component will be displayed -->
+    <div id="JSX"></div>
+
+    <!-- 
+    type="text/babel" tells Babel to convert JSX into normal JavaScript
+    before the browser executes it
+    -->
+    <script type="text/babel">
+
+        // Create a React component using ES6 class syntax
+        class Greeting extends React.Component {
+
+            // render() decides what appears in the browser
+            render() {
+
+                // JSX syntax (looks like HTML but is actually JavaScript)
+                return <h1>Hello, World!</h1>;
+            }
+        }
+
+        // Render the Greeting component inside the div with id="JSX"
+        ReactDOM.render(
+            <Greeting />,                    // React component
+            document.getElementById('JSX')  // Target HTML element
+        );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title of the webpage -->
+    <title>React 1</title>
+
+    <!-- React core library -->
+    <script src="react.js"></script>
+
+    <!-- React library for rendering to the DOM -->
+    <script src="react-dom.js"></script>
+</head>
+
+<body>
+
+    <!-- This is the container where the React component will be rendered -->
+    <div id="My_React_Code"></div>
+
+    <script>
+
+        // Create a React component called Counter
+        // React.createClass is an old React method for defining components
+        var Counter = React.createClass({
+
+            // render() returns what should appear on the screen
+            render: function() {
+
+                // Convert milliseconds to tenths of seconds
+                var time_Passed = Math.round(this.props.time_Passed / 100);
+
+                // Format the number of seconds
+                // Adds ".0" if the value is a whole number
+                var seconds_Passed =
+                    time_Passed / 10 + (time_Passed % 10 ? '' : '.0');
+
+                // Text that will appear in the browser
+                var text =
+                    'My React code started running ' +
+                    seconds_Passed +
+                    ' seconds ago!';
+
+                // Create a paragraph element with the text
+                return React.DOM.p(null, text);
+            }
+        });
+
+        // Create a factory for the Counter component
+        // This lets us easily create new Counter elements
+        var counter_factory = React.createFactory(Counter);
+
+        // Store the time when the counter started
+        var start_Counting = new Date().getTime();
+
+        // setInterval runs a function repeatedly
+        // Here it updates the React component every 50 milliseconds
+        setInterval(function() {
+
+            // Render the Counter component into the div
+            ReactDOM.render(
+
+                // Pass the elapsed time as a prop
+                counter_factory({
+                    time_Passed: new Date().getTime() - start_Counting
+                }),
+
+                // Target HTML element where React will display the component
+                document.getElementById('My_React_Code')
+
+            );
+
+        }, 50); // run every 50ms
+
+    </script>
+
+</body>
+</html>
