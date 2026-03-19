@@ -1,0 +1,25 @@
+/* Slideshow container */
+#slideshow {
+    margin: 50px auto; /* center container */
+    position: relative; /* for absolute positioning of slides */
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); /* shadow around slideshow */
+}
+
+/* Each slide */
+#slideshow > div {
+    position: absolute; /* stack slides on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%; /* fill container */
+    height: 100%; /* fill container */
+}
+
+/* Slide images */
+#slideshow img {
+    width: 100%; /* make image fill slide */
+    height: 100%;
+    object-fit: cover; /* crop image nicely */
+}

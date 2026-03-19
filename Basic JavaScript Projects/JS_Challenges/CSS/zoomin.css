@@ -1,0 +1,42 @@
+/* Center everything on the page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* container for the image */
+.image-container {
+    display: inline-block;
+    overflow: hidden; /* hides overflow when zooming in */
+}
+
+/* image styling */
+.zoom-image {
+    width: 300px;
+    height: auto;
+
+    /*apply animation */
+    animation: zoomInOut 4s infinite;
+
+    /* Smooth scaling */
+    transition: transform 0.5s ease;
+}
+
+/* Define zoom animation */
+@keyframes zoomInOut {
+    /* normal size */
+    0% {
+        transform: scale(1);
+    }
+
+    /* Zoom in */
+    50% {
+        transform: scale(1.5);
+    }
+
+    /* Back to normal */
+    100% {
+        transform: scale(1);
+    }
+}

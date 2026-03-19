@@ -1,0 +1,55 @@
+/* SMOOTH SCROLLING
+   This makes all jumps to anchors smooth instead of instant.
+   Works in modern browsers without JavaScript. */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*  BODY STYLING
+   Basic font and zero margin/padding to have full control. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR STYLING
+   Fixed at the top so it's always visible while scrolling. */
+.navbar {
+    position: fixed;       /* Sticks navbar to top */
+    top: 0;
+    width: 100%;           /* Full width */
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;         /* Ensures navbar is above other content */
+}
+
+/* NAVBAR LINKS
+   Style links inside navbar */
+.navbar a {
+    color: white;          /* White text */
+    margin: 0 20px;        /* Space between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Visual feedback on hover */
+}
+
+/* SECTIONS
+   Each section has padding for spacing and min-height for full viewport height */
+.section {
+    padding: 100px 20px;  /* Space inside section */
+    margin-top: 50px;      /* Prevent content being hidden under fixed navbar */
+    min-height: 100vh;     /* Each section fills full viewport height */
+}
+
+/* DIFFERENT BACKGROUNDS
+   Easy to visually separate sections */
+#section1 { background-color: #f1f1f1; }
+#section2 { background-color: #e2e2f0; }
+#section3 { background-color: #d0f0d0; }
