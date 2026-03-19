@@ -1,0 +1,36 @@
+/* ================================= */
+/* VW UNIT CHALLENGE */
+/* Text resizes based on viewport width */
+/* ================================= */
+
+.vw-title {
+  font-size: 5vw;
+}
+
+.vw-text {
+  font-size: 2vw;
+}
+
+
+/* ================================= */
+/* FADE CHALLENGE */
+/* Fade in effect on page load */
+/* ================================= */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+

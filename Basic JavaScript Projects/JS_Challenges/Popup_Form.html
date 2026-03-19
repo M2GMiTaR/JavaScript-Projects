@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Popup Form</title>
+
+    <!-- FIXED typo: UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="CSS/popup_form.css">
+
+    <!-- Link JS (defer ensures HTML loads first) -->
+    <script src="JS/popup_form.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Button to open the popup -->
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <!-- Popup container (hidden by default) -->
+    <div class="form-popup" id="popupForm">
+
+        <!-- Form inside popup -->
+        <form action="/action_page.php" class="form-container">
+
+            <h1>Login</h1>
+
+            <!-- Email field -->
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <!-- Password field -->
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn">Login</button>
+
+            <!-- Close button (does NOT submit form) -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

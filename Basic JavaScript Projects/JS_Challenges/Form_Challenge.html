@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title shown in browser tab -->
+    <title>Form Challenge</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="CSS/form.css">
+</head>
+
+<body>
+
+    <!-- Page heading -->
+    <h2>Contact Form</h2>
+
+    <!--  Form element - id is used by JavaScript to target the form -->
+    <form id="contactForm">
+
+        <!-- First Name -->
+        <label for="fname">First Name:</label>
+        <!--id: used for label connection + JS
+            name: used to access value in JS (form.fname) -->
+        <input type="text" id="fname" name="fname">
+
+        <!-- Last Name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="555-867-5309"
+        >
+
+        <!-- Small helper text -->
+        <p class="hint">Format: 555-867-5309</p>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- Link to external JavaScript file (placed at bottom for performance) -->
+    <script src="JS/form_valid.js"></script>
+
+</body>
+</html>

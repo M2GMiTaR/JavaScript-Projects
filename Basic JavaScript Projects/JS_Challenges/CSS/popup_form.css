@@ -1,0 +1,86 @@
+/* Apply box-sizing to ALL elements (fixes layout issues) */
+* {
+  box-sizing: border-box;
+}
+
+/* Button to open the form */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+
+  /* Position button bottom-right */
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* Popup background container */
+.form-popup {
+  display: none; /* hidden by default */
+
+  position: fixed;
+
+  /* centering form*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+
+  /* Optional: dark overlay effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+/* Form box */
+.form-container {
+  max-width: 300px;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Input focus effect */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Submit button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Close button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Hover effects */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

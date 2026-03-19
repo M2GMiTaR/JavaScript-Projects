@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development Challenges</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    </head>
+    <body>
+
+        <!-- =============================== -->
+        <!-- VW UNIT CHALLENGE -->
+        <!-- Using viewport width units -->
+        <!-- =============================== -->
+
+        <h1 class="vw-title">VW Unit Challenge</h1>
+        <p class="vw-text">This text uses viewport width (vw) so it scales with the browser size.</p>
+
+<!-- =============================== -->
+<!-- FADE CHALLENGE -->
+<!-- Elements fade in when page loads -->
+<!-- =============================== -->
+
+<h1 class="fade-in">Fade Challenge</h1>
+
+<p class="fade-in">
+This text fades in smoothly when the page loads.
+</p>
+
+<div class="fade-in">
+    <p>Any element can fade in using this class.</p>
+</div>
+        <!-- =============================== -->
+        <!-- FORM CHALLENGE -->
+        <!-- Form with phone field and validation -->
+        <!-- =============================== -->
+
+        <h2>Contact Form</h2>
+
+        <form onsubmit="return validateForm()">
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <input type="submit" value="Submit">
+
+        </form>
+
+    </body>
+</html>
