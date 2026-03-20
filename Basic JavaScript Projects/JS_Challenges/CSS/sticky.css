@@ -1,0 +1,88 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, readable font for the page */
+    height: 2000px; /* Adds extra height so you can scroll and test the sticky button */
+    padding: 20px; /* Adds space inside the page so content isn’t stuck to edges */
+}
+
+/* Sticky contact button */
+#contactBtn {
+    position: fixed; /* Keeps the button in the same place even when scrolling */
+    bottom: 20px; /* Moves the button 20px up from the bottom of the screen */
+    right: 20px; /* Moves the button 20px in from the right side */
+    padding: 15px 20px; /* Adds space inside the button for better size and feel */
+    background-color: #007BFF; /* Blue background color */
+    color: white; /* Text color inside the button */
+    border: none; /* Removes default button border */
+    border-radius: 50px; /* Makes the button rounded (pill shape) */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
+/* Changes button color when user hovers over it */
+#contactBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Overlay background for popup */
+#contactForm {
+    position: fixed; /* Covers the entire screen and stays fixed */
+    top: 0; /* Starts from the very top */
+    left: 0; /* Starts from the very left */
+    width: 100%; /* Takes full width of the screen */
+    height: 100%; /* Takes full height of the screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    
+    /* These only work when display is flex (see below) */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+/* This class hides the popup completely */
+#contactForm.hidden {
+    display: none; /* Element is not visible and removed from layout */
+}
+
+/* When NOT hidden, we turn it into a flex container */
+#contactForm:not(.hidden) {
+    display: flex; /* Enables centering using flexbox */
+}
+
+/* Form box styling */
+.form-container {
+    background: white; /* White background for the form */
+    padding: 20px; /* Space inside the form box */
+    border-radius: 10px; /* Rounded corners */
+    width: 300px; /* Fixed width for the form */
+    position: relative; /* Allows absolute positioning inside (for close button) */
+}
+
+/* Close button (top-right of form) */
+#closeBtn {
+    position: absolute; /* Positioned relative to .form-container */
+    top: 10px; /* 10px from the top of the form */
+    right: 15px; /* 15px from the right side */
+    font-size: 20px; /* Makes the "X" bigger */
+    cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+/* Form inputs */
+input, textarea {
+    width: 100%; /* Makes inputs take full width of the form */
+    margin: 10px 0; /* Adds space above and below each input */
+    padding: 8px; /* Adds space inside input fields */
+}
+
+/* Submit button */
+form button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Makes button larger and easier to click */
+    background-color: #28a745; /* Green color for submit */
+    color: white; /* Text color */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Darker green when hovering over submit button */
+form button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Contact Button</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="CSS/sticky.css">
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+    <p>Scroll around and click the contact button!</p>
+
+    <!-- Sticky button that stays at bottom right -->
+    <button id="contactBtn">Contact Us</button>
+
+    <!-- Popup form container (hidden by default) -->
+    <!-- it starts with class 'hidden' so it does NOT show on page load -->
+    <div id="contactForm" class="hidden">
+        <div class="form-container">
+
+            <!-- Close button for the popup -->
+            <span id="closeBtn">&times;</span>
+
+            <h2>Contact Us</h2>
+
+            <!-- Simple contact form -->
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Your name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Your email" required>
+
+                <label>Message</label>
+                <textarea placeholder="Your message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/sticky.js"></script>
+</body>
+</html>
